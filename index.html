@@ -25,7 +25,30 @@
                 font-family: "Sora", serif;
             }
         }
-      </style>
+        /* Simple Fade-In Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 10;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-in forwards;
+        }
+
+        /* Adjust animation timing and delay for more effects */
+        .fade-in-up {
+            animation-duration: 0.5s;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+        }
+
+    </style>
 </head>
 
 <body class="sora">
@@ -65,22 +88,72 @@
         <div class="max-w-[1031px] mx-auto mt-14 lg:mt-24 px-4 md:px-6 space-y-10">
             <!-- title -->
             <div class="text-center space-y-8 max-w-[750px] mx-auto px-4">
-                <h1 class="text-[3.5rem]  lg:text-[4.67rem] text-[#111111] font-semibold">Freshness <span
-                        class="text-[#179800]">You Can
-                        Count</span> On, Prices You’ll Love!</h1>
-                <p class="text-[#3a3a3a] text-[1.34rem]">Shop your daily essentials at unbeatable prices. From fresh
-                    produce to pantry staples, we’ve got you covered every day!</p>
+                <h1 class="text-[3.5rem] lg:text-[4.67rem] text-[#111111] font-semibold fade-in-up">
+                    Freshness <span class="text-[#179800]">You Can Count</span> On, Prices You’ll Love!
+                </h1>
+                <p class="text-[#3a3a3a] text-[1.34rem] fade-in-up" data-aos="fade-up">
+                    Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you
+                    covered every day!
+                </p>
             </div>
 
             <div>
-                <img class="max-h-[838px]" src="images/hero-vegetables.png" alt="">
+                <img class="max-h-[838px] fade-in-up" src="images/hero-vegetables.png" alt="" data-aos="fade-up">
             </div>
         </div>
+
+
+
 
     </header>
 
     <!-- Main section -->
     <main>
+        <!-- Seasonal Picks -->
+        <section class="max-w-[1320px] mx-auto px-4 md:px-6 mt-36">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text-[3rem] text-[#179800] font-semibold">Seasonal Picks</h2>
+                <p class="text-[1.5rem] ">Discover the freshest seasonal products, handpicked just for you. <br> Enjoy
+                    the best of what nature has to offer, right at your doorstep.</p>
+            </div>
+            <!--  Product Showcase -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-[#EFEBE3]">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl space-y-7 hover:bg-gradient-to-t from-[#e9bdbdf6] to-[#e92300] ">
+                    <div class="max-w-[300px] max-h-[300px] mx-auto ">
+                        <img class="w-full p-4" src="images/fresh-tomato.png" alt="">
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <h2 class="text-[2rem] font-semibold text-[#111111]">Tomato</h2>
+                        <p class="text-[1rem]">Fresh, juicy tomatoes straight from the farm. <br> Perfect for your
+                            salads, sauces, or just as a snack!</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl space-y-7 hover:bg-gradient-to-t from-[#599220f6] to-[#23e900] ">
+                    <div class="max-w-[250px] max-h-[250px] mx-auto ">
+                        <img class="w-full p-3" src="images/fresh-cauli.png" alt="">
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <h2 class="text-[2rem] font-semibold text-[#111111]">Cauliflower</h2>
+                        <p class="text-[1rem]">Crisp, tender cauliflower that’s perfect for roasting, steaming, or
+                            adding to your favorite dishes.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl space-y-7 hover:bg-gradient-to-t from-[#dae6cef6] to-[#ec6104] ">
+                    <div class="max-w-[300px] h-[250px] mx-auto">
+                        <img class="w-full p-3" src="images/fresh-carrot.png" alt="">
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <h2 class="text-[2rem] font-semibold text-[#111111]">Carrot</h2>
+                        <p class="text-[1rem]">Sweet and crunchy carrots, perfect for snacking or <br> adding a healthy
+                            touch to your meals!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Services Section -->
         <section class="max-w-[1320px] mx-auto px-4 md:px-6 my-36">
@@ -356,7 +429,7 @@
         </section>
 
         <!-- Get Grocery News! -->
-        <section class="max-w-[1320px] mx-auto px-4 md:px-6 relative -bottom-72 lg:-bottom-56">
+        <section class="max-w-[1320px] mx-auto px-4 md:px-6 relative -bottom-72 lg:-bottom-64">
             <div class="bg-[#EFEBE3] rounded-3xl justify-around items-center
             p-10 lg:px-14
             lg:flex    space-y-8 lg:space-y-0">
